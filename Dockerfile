@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:14
+FROM node:16
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN npm install express
 COPY . .
 
 # Expose the port that the application will run on
-EXPOSE 3000
+EXPOSE 8888
 
 # Command to run the application
 CMD ["node", "server.js"]
